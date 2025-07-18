@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AI Mode Technical Architecture</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #4285f4;
+            transition: all 0.3s ease;
+        }
+        .step:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            background: #4285f4;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .step-description {
+            color: #666;
+            line-height: 1.5;
+        }
+        .arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #4285f4;
+            margin: 10px 0;
+        }
+        .technical-details {
+            background: #e8f4f8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #34a853;
+        }
+        .technical-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Google AI Mode: Technical Architecture</h1>
+        
+        <div class="flow-diagram">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">User Query Input</div>
+                    <div class="step-description">User submits complex, multi-part question via text, voice, or image through the AI Mode interface</div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Query Fan-Out Technique</div>
+                    <div class="step-description">AI system breaks down the complex question into multiple subtopics and components for parallel processing</div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Parallel Search Execution</div>
+                    <div class="step-description">Multiple queries are executed simultaneously across various data sources and web indexes</div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Gemini 2.0 Processing</div>
+                    <div class="step-description">Advanced AI model processes gather information, perform reasoning, and apply context understanding</div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">Response Synthesis</div>
+                    <div class="step-description">AI combines multiple data sources into a coherent, comprehensive response with supporting links</div>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-title">Personalized Delivery</div>
+                    <div class="step-description">Final response is delivered with personalization, follow-up suggestions, and conversational continuity</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="technical-details">
+            <div class="technical-title">Key Technical Components:</div>
+            <ul>
+                <li><strong>Query Fan-Out:</strong> Divides complex questions into subtopics for parallel processing</li>
+                <li><strong>Gemini 2.0 Model:</strong> Advanced language model for reasoning and synthesis</li>
+                <li><strong>Multimodal Input:</strong> Processes text, voice, and image inputs simultaneously</li>
+                <li><strong>Real-time Web Crawling:</strong> Accesses current web information beyond traditional indexes</li>
+                <li><strong>Conversational Memory:</strong> Maintains context across follow-up questions</li>
+            </ul>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Deep Search</h3>
+                <p>Comprehensive analysis of complex topics with multi-source integration</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Data Visualization</h3>
+                <p>Automatic generation of charts and visual representations of information</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Conversational Flow</h3>
+                <p>Natural dialogue with follow-up questions and context retention</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Personalization</h3>
+                <p>Tailored responses based on user preferences and search history</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
